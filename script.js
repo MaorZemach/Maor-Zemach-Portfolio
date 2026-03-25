@@ -240,30 +240,37 @@ const SITE_CONFIG = {
 
 
   /* ----------------------------------------------------------------
-     8. EMAIL COPY-TO-CLIPBOARD
-     Clicking the email contact link copies the address and briefly
-     shows "Copied!" feedback instead of opening the mail client.
+     8. NETLIFY CONTACT FORM — SUCCESS FEEDBACK
+     Netlify redirects to /?submitted=true after a successful POST.
+     We detect this, show the success message, and hide the form fields.
   ---------------------------------------------------------------- */
-  const emailLink = qs('.contact__link--email');
+  const contactForm  = qs('#contact-form');
+  const formSuccess  = qs('#form-success');
 
-  if (emailLink && navigator.clipboard) {
-    emailLink.addEventListener('click', e => {
+  if (contactForm && formSuccess) {
+    // Show inline success on Netlify redirect (?submitted=true)
+    if (window.location.search.includes('submitted=true')) {
+      contactForm.querySelectorAll('.contact__form-row, .form-field, .contact__form-footer')
+        .forEach(el => el.style.display = 'none');
+      formSuccess.removeAttribute('hidden');
+    }
+
+    // Also handle AJAX-style submit for a smoother UX (no page reload)
+    contactForm.addEventListener('submit', e => {
       e.preventDefault();
+      const data = new FormData(contactForm);
 
-      navigator.clipboard.writeText(cfg.contactEmail).then(() => {
-        const val = qs('.contact__link-value', emailLink);
-        if (!val) return;
-        const orig = val.textContent;
-        val.textContent = '✓ Copied to clipboard!';
-        val.style.color = 'var(--ok)';
-        setTimeout(() => {
-          val.textContent = orig;
-          val.style.color = '';
-        }, 1800);
-      }).catch(() => {
-        // Clipboard denied — fall back to mailto
-        window.location.href = `mailto:${cfg.contactEmail}`;
-      });
+      fetch('/', { method: 'POST', body: data })
+        .then(() => {
+          contactForm.querySelectorAll('.contact__form-row, .form-field, .contact__form-footer')
+            .forEach(el => el.style.display = 'none');
+          formSuccess.removeAttribute('hidden');
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(() => {
+          // Network error: fall back to normal form submission
+          contactForm.submit();
+        });
     });
   }
 
