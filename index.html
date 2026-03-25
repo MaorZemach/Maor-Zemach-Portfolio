@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maor Zemach — IT Specialist & System Administrator. Portfolio showcasing enterprise Windows, Active Directory, networking, scripting, and AI-driven automation.">
+    <title>Maor Zemach — IT Specialist</title>
+
+    <!-- Fonts: Syne (display) · DM Sans (body) · JetBrains Mono (code/labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION
+         data-cfg attributes are populated by SITE_CONFIG in script.js
+    ============================================================ -->
+    <header id="site-header" role="banner">
+        <nav class="nav container" aria-label="Main navigation">
+            <a href="#hero" class="nav__logo" aria-label="Back to top">
+                <span class="nav__logo-name" data-cfg="fullName">Maor Zemach</span>
+                <span class="nav__logo-badge" aria-hidden="true">SYS</span>
+            </a>
+
+            <ul class="nav__links" id="nav-links" role="list">
+                <li><a href="#about"      class="nav__link" data-nav>About</a></li>
+                <li><a href="#skills"     class="nav__link" data-nav>Skills</a></li>
+                <li><a href="#experience" class="nav__link" data-nav>Experience</a></li>
+                <li><a href="#projects"   class="nav__link" data-nav>Projects</a></li>
+                <li><a href="#contact"    class="nav__link" data-nav>Contact</a></li>
+                <li>
+                    <!-- href populated from SITE_CONFIG.resumeFileName -->
+                    <a href="maor_tzemach_cv.pdf" class="nav__link nav__link--cta"
+                       data-cfg-href="resumeUrl" download>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Resume
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Theme toggle -->
+            <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                <!-- Moon icon (shown in dark mode) -->
+                <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <!-- Sun icon (shown in light mode) -->
+                <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+
+            <button class="nav__hamburger" id="nav-hamburger"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             HERO
+        ============================================================ -->
+        <section id="hero" class="hero" aria-label="Introduction">
+            <div class="hero__bg-grid"  aria-hidden="true"></div>
+            <div class="hero__bg-glow"  aria-hidden="true"></div>
+            <div class="hero__bg-scan"  aria-hidden="true"></div>
+
+            <div class="container hero__container">
+
+                <!-- Left: Content -->
+                <div class="hero__content">
+                    <div class="hero__availability">
+                        <span class="hero__availability-dot" aria-hidden="true"></span>
+                        Available for opportunities
+                    </div>
+
+                    <h1 class="hero__heading">
+                        Hi, I'm <span class="hero__heading-name" data-cfg="fullName">Maor Zemach</span>
+                    </h1>
+
+                    <p class="hero__title" aria-label="Role: IT Specialist / System Administrator">
+                        <span class="hero__title-prefix" aria-hidden="true">//&nbsp;</span><span
+                        data-cfg="primaryTitle">IT SPECIALIST / SYSTEM ADMINISTRATOR</span>
+                    </p>
+
+                    <p class="hero__hook">
+                        Highly reliable IT Professional with a proven track record providing L1-L2 support
+                        and system administration in complex, multi-site Windows Server and Active Directory
+                        environments. Proficient in networking protocols (TCP/IP, DNS, DHCP), workflow
+                        optimization, and leveraging scripting to drive efficiency. Passionate about
+                        independent learning and implementing emerging technologies to solve real-world
+                        organizational challenges.
+                    </p>
+
+                    <div class="hero__actions">
+                        <!-- hrefs populated by SITE_CONFIG via script.js -->
+                        <a href="maor_tzemach_cv.pdf" class="btn btn--primary" data-cfg-href="resumeUrl" download>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Download Resume (PDF)
+                        </a>
+                        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- Right: Terminal decoration -->
+                <div class="hero__terminal" aria-hidden="true">
+                    <div class="hero__terminal-bar">
+                        <span class="term-dot term-dot--red"></span>
+                        <span class="term-dot term-dot--yellow"></span>
+                        <span class="term-dot term-dot--green"></span>
+                        <span class="hero__terminal-title">maor@portfolio:~</span>
+                    </div>
+                    <div class="hero__terminal-body">
+                        <div class="term-line" style="--d:0.2s"><span class="term-p">$</span> <span class="term-cmd">whoami</span></div>
+                        <div class="term-line term-out" style="--d:0.5s">maor.tzemach</div>
+                        <div class="term-line" style="--d:0.8s"><span class="term-p">$</span> <span class="term-cmd">cat role.txt</span></div>
+                        <div class="term-line term-out" style="--d:1.1s">IT Specialist &amp; Sysadmin</div>
+                        <div class="term-line term-out" style="--d:1.3s">L1-L2 Support · Enterprise Env.</div>
+                        <div class="term-line" style="--d:1.6s"><span class="term-p">$</span> <span class="term-cmd">ls expertise/</span></div>
+                        <div class="term-line term-out" style="--d:1.9s">windows_server/ active_directory/</div>
+                        <div class="term-line term-out" style="--d:2.1s">networking/    scripting/</div>
+                        <div class="term-line term-out" style="--d:2.3s">cloud/         automation_ai/</div>
+                        <div class="term-line" style="--d:2.6s"><span class="term-p">$</span> <span class="term-cmd">echo $STATUS</span></div>
+                        <div class="term-line term-out term-out--accent" style="--d:2.9s">&#x2714; Open to new opportunities</div>
+                        <div class="term-line" style="--d:3.2s"><span class="term-p">$</span> <span class="term-cursor">█</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero__scroll-hint" aria-hidden="true">
+                <span>scroll</span>
+                <div class="hero__scroll-bar"></div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ABOUT
+        ============================================================ -->
+        <section id="about" class="section about" aria-labelledby="about-heading">
+            <div class="container">
+                <p class="section__label" aria-hidden="true">01 / About</p>
+
+                <div class="about__grid">
+                    <div class="about__text" data-reveal>
+                        <h2 id="about-heading" class="section__title">
+                            About <em>Me</em>
+                        </h2>
+                        <p>
+                            My background in Computer Science initially paved the way for my career, but it's
+                            my genuine passion for hands-on problem-solving that drives me within the IT realm.
+                            I derive immense satisfaction from diagnosing complex technical issues, understanding
+                            their root causes, and implementing effective solutions that directly impact an
+                            organization's success.
+                        </p>
+                        <p>
+                            I thrive on the continuous learning curve inherent in IT. Currently, I am deeply
+                            fascinated by the powerful intersection of <strong>AI and IT infrastructure</strong>.
+                            I dedicate my spare time to researching and implementing AI-driven tools to automate
+                            daily operations, optimize workflows, and bring modern efficiency to traditional IT
+                            practices.
+                        </p>
+                    </div>
+
+                    <div class="about__cards" data-reveal>
+                        <div class="about__card">
+                            <div class="about__card-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                            </div>
+                            <h3>Enterprise Experience</h3>
+                            <p>Proven in complex, multi-site Windows Server and Active Directory environments at L1-L2 level.</p>
+                        </div>
+                        <div class="about__card">
+                            <div class="about__card-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
+                            <h3>AI-Driven Mindset</h3>
+                            <p>Actively building automation tools powered by LLMs to modernize traditional IT operations.</p>
+                        </div>
+                        <div class="about__card">
+                            <div class="about__card-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <h3>Root-Cause Thinker</h3>
+                            <p>I don't patch symptoms — I trace issues to their source and build solutions that hold.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             SKILLS / TECHNICAL EXPERTISE
+        ============================================================ -->
+        <section id="skills" class="section skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <p class="section__label" aria-hidden="true">02 / Expertise</p>
+                <h2 id="skills-heading" class="section__title">Technical <em>Expertise</em></h2>
+                <p class="section__sub">Technologies, systems, and platforms I work with day-to-day.</p>
+
+                <div class="skills__grid">
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                            </div>
+                            <h3>OS &amp; Infrastructure</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag tag--accent" role="listitem">Windows Server</span>
+                            <span class="tag tag--accent" role="listitem">Active Directory</span>
+                            <span class="tag" role="listitem">Microsoft Exchange</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+                            </div>
+                            <h3>Networking</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag tag--accent" role="listitem">TCP/IP</span>
+                            <span class="tag" role="listitem">DNS</span>
+                            <span class="tag" role="listitem">DHCP</span>
+                            <span class="tag" role="listitem">Network Configuration</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                            </div>
+                            <h3>Cloud &amp; Virtualization</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag tag--accent" role="listitem">AWS</span>
+                            <span class="tag" role="listitem">VMware</span>
+                            <span class="tag" role="listitem">Citrix</span>
+                            <span class="tag" role="listitem">DaaS</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <h3>Scripting &amp; Programming</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag tag--accent" role="listitem">Python</span>
+                            <span class="tag" role="listitem">C</span>
+                            <span class="tag" role="listitem">C++</span>
+                            <span class="tag" role="listitem">C#</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
+                            <h3>Workflow &amp; Tools</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag" role="listitem">Ticket Resolution</span>
+                            <span class="tag tag--accent" role="listitem">Microsoft 365</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__cat" data-reveal>
+                        <header class="skills__cat-header">
+                            <div class="skills__cat-icon" aria-hidden="true">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <h3>Languages</h3>
+                        </header>
+                        <div class="tags" role="list">
+                            <span class="tag tag--accent" role="listitem">Hebrew — Fluent</span>
+                            <span class="tag tag--accent" role="listitem">English — Advanced</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             EXPERIENCE & EDUCATION
+        ============================================================ -->
+        <section id="experience" class="section experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <p class="section__label" aria-hidden="true">03 / Career</p>
+                <h2 id="experience-heading" class="section__title">Experience &amp; <em>Education</em></h2>
+
+                <div class="journey__grid">
+
+                    <!-- ── EXPERIENCE column ── -->
+                    <div class="journey__col" data-reveal>
+                        <div class="journey__col-header">
+                            <div class="journey__col-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                            </div>
+                            <span class="journey__col-label">Experience</span>
+                        </div>
+
+                        <div class="journey__entry">
+                            <div class="journey__entry-meta">
+                                <span class="journey__entry-period">2024 — Present</span>
+                                <span class="journey__entry-status">Current</span>
+                            </div>
+                            <h3 class="journey__entry-role">Technical Support &amp; Systems Administrator</h3>
+                            <p class="journey__entry-org">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                Dan Hotels
+                            </p>
+                            <ul class="journey__entry-bullets" aria-label="Responsibilities">
+                                <li>Providing advanced L1-L2 technical support in a complex, multi-site Windows environment serving over 1,000 end-users.</li>
+                                <li>Managing Active Directory, VMware virtual machines, and Microsoft Exchange services.</li>
+                                <li>Optimizing daily workflows to reduce ticket resolution times.</li>
+                            </ul>
+                            <div class="tags tags--sm journey__entry-tags" role="list">
+                                <span class="tag tag--sm tag--accent" role="listitem">Windows Server</span>
+                                <span class="tag tag--sm" role="listitem">Active Directory</span>
+                                <span class="tag tag--sm" role="listitem">VMware</span>
+                                <span class="tag tag--sm" role="listitem">Exchange</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical divider -->
+                    <div class="journey__divider" aria-hidden="true">
+                        <div class="journey__divider-line"></div>
+                    </div>
+
+                    <!-- ── EDUCATION column ── -->
+                    <div class="journey__col" data-reveal>
+                        <div class="journey__col-header">
+                            <div class="journey__col-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <span class="journey__col-label">Education</span>
+                        </div>
+
+                        <div class="journey__entry">
+                            <div class="journey__entry-meta">
+                                <span class="journey__entry-period">2019 — 2023</span>
+                                <span class="journey__entry-status journey__entry-status--done">Graduated</span>
+                            </div>
+                            <h3 class="journey__entry-role">B.Sc. in Computer Science</h3>
+                            <p class="journey__entry-org">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                The Academic College of Tel Aviv-Yafo
+                            </p>
+                            <p class="journey__entry-desc">
+                                Graduated with a strong foundation in computer science principles, algorithms,
+                                and logical problem-solving, which fuels my analytical approach to IT
+                                infrastructure today.
+                            </p>
+                            <div class="tags tags--sm journey__entry-tags" role="list">
+                                <span class="tag tag--sm" role="listitem">Algorithms</span>
+                                <span class="tag tag--sm" role="listitem">Data Structures</span>
+                                <span class="tag tag--sm" role="listitem">Systems</span>
+                                <span class="tag tag--sm" role="listitem">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             PROJECTS
+        ============================================================ -->
+        <section id="projects" class="section projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <p class="section__label" aria-hidden="true">04 / Projects</p>
+                <h2 id="projects-heading" class="section__title">Featured <em>Projects</em></h2>
+                <p class="section__sub">Hands-on builds — from AI-powered tools to enterprise lab environments.</p>
+
+                <div class="projects__grid">
+
+                    <!-- Project 1 — Featured -->
+                    <article class="project-card project-card--featured" data-reveal>
+                        <div class="project-card__featured-badge" aria-label="Featured project">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Featured
+                        </div>
+                        <div class="project-card__top">
+                            <span class="project-card__num" aria-hidden="true">01</span>
+                        </div>
+                        <h3 class="project-card__title">ATS-Optimized Resume Generator</h3>
+                        <p class="project-card__desc">
+                            Developed an automated tool utilizing AI (Claude) that accepts job description details
+                            as input and dynamically generates a tailored, professional PDF resume optimized for that
+                            specific role. Demonstrates prompt engineering skills, automated document generation,
+                            and the ability to merge AI capability with workflow automation.
+                        </p>
+                        <div class="tags tags--sm" role="list" aria-label="Technologies used">
+                            <span class="tag tag--sm tag--accent" role="listitem">Python</span>
+                            <span class="tag tag--sm tag--accent" role="listitem">LLM Integration</span>
+                            <span class="tag tag--sm tag--accent" role="listitem">Automation</span>
+                        </div>
+                        <!-- href populated from SITE_CONFIG.projectGitHubUrl -->
+                        <a href="https://github.com/MaorZemach/ATS-Optimized-Resume-Generator"
+                           class="btn btn--primary project-card__cta"
+                           data-cfg-href="projectGitHubUrl"
+                           target="_blank" rel="noopener noreferrer">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            View on GitHub
+                        </a>
+                    </article>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CONTACT
+        ============================================================ -->
+        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <p class="section__label" aria-hidden="true">05 / Contact</p>
+                <h2 id="contact-heading" class="section__title">Get in <em>Touch</em></h2>
+                <p class="section__sub">
+                    Open to IT Specialist, Sysadmin, DevOps Engineer, Cloud Engineer, and junior automation engineering roles.
+                    Let's connect.
+                </p>
+
+                <div class="contact__links">
+                    <!-- href populated from SITE_CONFIG.contactEmail -->
+                    <a href="mailto:maorize1@gmail.com"
+                       class="contact__link contact__link--email"
+                       data-cfg-href="emailHref">
+                        <div class="contact__link-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact__link-text">
+                            <span class="contact__link-label">Email</span>
+                            <span class="contact__link-value" data-cfg="contactEmail">maorize1@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <!-- href populated from SITE_CONFIG.linkedinUrl -->
+                    <a href="https://www.linkedin.com/in/maor-zemach-7217172b8"
+                       class="contact__link"
+                       data-cfg-href="linkedinUrl"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="contact__link-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div class="contact__link-text">
+                            <span class="contact__link-label">LinkedIn</span>
+                            <span class="contact__link-value">linkedin.com/in/maor-zemach-7217172b8</span>
+                        </div>
+                    </a>
+
+                    <!-- href populated from SITE_CONFIG.githubProfileUrl -->
+                    <a href="https://github.com/MaorZemach"
+                       class="contact__link"
+                       data-cfg-href="githubProfileUrl"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="contact__link-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </div>
+                        <div class="contact__link-text">
+                            <span class="contact__link-label">GitHub</span>
+                            <span class="contact__link-value">github.com/MaorZemach</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <span>&copy; 2024 <span data-cfg="fullName">Maor Zemach</span>. IT Portfolio.</span>
+            <span class="footer__dot" aria-hidden="true">&middot;</span>
+            <span class="footer__tagline">Built with curiosity &amp; too many terminal sessions</span>
+        </div>
+    </footer>
+
+    <!-- script.js contains SITE_CONFIG — edit that file to update personal details -->
+    <script src="script.js"></script>
+</body>
+</html>
